@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lightness</title>
+    <style>
+        body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: skyblue;
+    flex-direction: column;
+}
+.lightness{
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 64px;
+    color: #000;
+    animation: float 3s ease-in-out 2s infinite alternate;
+    filter: drop-shadow(1px 1px 4px #000);
+    z-index: 1;
+}
+@keyframes float {
+    from{
+        padding-bottom: 0px;
+    }
+    to{
+        padding-bottom: 150px;
+    }
+}
+.below-shadow{
+    margin-top: 150px;
+    width: 350px;
+    height: 30px;
+    border-radius: 50%;
+    background: #3a3a3a4a;
+    filter: blur(10px);
+    animation: shadow 3s ease-in-out 2s infinite alternate;
+    z-index: 1;
+}
+@keyframes shadow {
+    from{
+        width: 350px;
+    }
+    to{
+        width: 250px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="lightness">
+        LIGHTNESS
+    </div>
+    <div class="below-shadow"></div>
+</body>
+</html>
